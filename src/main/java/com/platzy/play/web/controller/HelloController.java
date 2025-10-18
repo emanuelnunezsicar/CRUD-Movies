@@ -1,5 +1,6 @@
-package com.platzy.play;
+package com.platzy.play.web.controller;
 
+import com.platzy.play.domain.service.AIService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +12,7 @@ public class HelloController {
         this.aiService = aiService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/hello")
     public String hello() {
         return this.aiService.generateGreeting();
     }
